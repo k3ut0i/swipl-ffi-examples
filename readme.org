@@ -1,0 +1,11 @@
+* Call SWI-Prolog from C
+A couple of examples calling SWI-Prolog from C.
+
+[[between_c.c]] calls the predicate ~between/3~ and gets all the numbers.
+[[consult_file.c]] loads the file [[digits.pl]] and the finds all numbers that satisfy ~digit/1~.
+
+Compile it as follows.
+#+begin_src sh :exports code
+  swipl-ld -o between between_c.c
+  swipl-ld -o consult_digits consult_file.c 
+#+end_src
